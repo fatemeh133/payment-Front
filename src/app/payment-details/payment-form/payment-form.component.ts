@@ -16,13 +16,6 @@ export class PaymentFormComponent {
 
     const paymentInfo: Payment = form.value;
 
-    this.PaymentService.postPaymentDetails(paymentInfo).subscribe({
-      next: (result) => {
-        console.log(result);
-      },
-      error: (error: HttpErrorResponse) => {
-        console.error('Error:', error.error); // Log the error details
-      },
-    });
+    this.PaymentService.postPaymentDetails(paymentInfo);
   }
 }

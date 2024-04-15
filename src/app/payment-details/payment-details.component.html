@@ -16,10 +16,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>محمد هاشمی</td>
-          <td>1232353</td>
-          <td>12/32</td>
+        <tr *ngFor="let item of paymentDetails">
+          <td>{{ item.cardOwnerName }}</td>
+          <td>{{ item.cardNumber }}</td>
+          <td>{{ item.expirationDate }}</td>
           <td><i class="far fa-trash-alt fa-lg"></i></td>
         </tr>
       </tbody>
