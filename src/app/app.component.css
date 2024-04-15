@@ -1,0 +1,51 @@
+body {
+  direction: rtl;
+  background-color: #f5f5f5;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.form-group label {
+  text-align: right;
+}
+
+.jumbotron {
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+.form-group label {
+  font-weight: bold;
+}
+.form-control-lg {
+  border-radius: 5px;
+}
+.form-row .form-group {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.btn-info {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+.table {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.thead-light {
+  background-color: #3498db;
+  color: #fff;
+}
+.table td,
+.table th {
+  border: none;
+}
+.fa-trash-alt {
+  color: #dc3545;
+  cursor: pointer;
+}

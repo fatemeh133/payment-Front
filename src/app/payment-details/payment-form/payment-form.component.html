@@ -1,0 +1,51 @@
+<form autocomplete="off">
+  <input type="hidden" name="paymentDetailId" />
+  <div class="form-group">
+    <label for="cardOwnerName">مالک کارت</label>
+    <input
+      type="text"
+      class="form-control form-control-lg"
+      id="cardOwnerName"
+      placeholder="نام و نام خانوادگی"
+      name="cardOwnerName"
+    />
+  </div>
+  <div class="form-group">
+    <label for="cardNumber">شماره کارت</label>
+    <input
+      type="text"
+      class="form-control form-control-lg"
+      id="cardNumber"
+      placeholder="شماره 16 رقمی"
+      name="cardNumber"
+      required
+      maxlength="16"
+      minlength="16"
+    />
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="securityCode">کد امنیتی</label>
+      <input
+        type="password"
+        class="form-control form-control-lg"
+        id="securityCode"
+        placeholder="CVV"
+        name="securityCode"
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label for="expirationDate">تاریخ انقضا</label>
+      <input
+        type="text"
+        class="form-control form-control-lg"
+        id="expirationDate"
+        placeholder="MM/YY"
+        name="expirationDate"
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-info btn-lg btn-block" type="submit">ثبت</button>
+  </div>
+</form>
