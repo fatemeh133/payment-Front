@@ -16,4 +16,10 @@ export class PaymentDetailsComponent implements OnInit {
     });
     this.paymentService.getPaymentDetails();
   }
+
+  currentPaymentHandler(Paymentitem: Payment) {
+    console.log(Paymentitem);
+
+    this.paymentService.currentPaymentDetail.next({ ...Paymentitem });
+  }
 }

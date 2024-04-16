@@ -46,6 +46,12 @@ body {
   border: none;
 }
 .fa-trash-alt {
-  color: #dc3545;
+  color: #ce2626;
   cursor: pointer;
+}
+.table td:hover {
+  background-color: #bcdef5;
+}
+tbody tr:hover {
+  border: 1px solid red;
 }

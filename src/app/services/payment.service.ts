@@ -1,7 +1,7 @@
 import { Payment } from './payment.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,9 +10,17 @@ export class PaymentService {
   constructor(private http: HttpClient) {}
 
   paymentListChanged = new BehaviorSubject<Payment[]>([]);
+  currentPaymentDetail = new Subject<Payment>();
+
   readonly url = 'https://localhost:7294/api/PaymentDetails';
   postPaymentDetails(payment: Payment) {
     return this.http.post(this.url, payment).subscribe((newPaymentRes) => {
+      console.log('PaymentDetails got from form value', payment);
+      console.log(
+        'new Payment Response from post and subscribe',
+        newPaymentRes
+      );
+
       const currentPaymentArray = this.paymentListChanged.getValue() || [];
       this.paymentListChanged.next([
         ...currentPaymentArray,
