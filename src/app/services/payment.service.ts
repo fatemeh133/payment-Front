@@ -38,14 +38,16 @@ export class PaymentService {
   putPaymentDetails(paymentInfo: Payment) {
     this.http
       .put(this.url + '/' + paymentInfo.peymanetDetailId, paymentInfo)
-      .subscribe((res) => {
-        console.log('put response', res);
-        complete: () => {
+      .subscribe(
+        (res) => {
+          console.log('put response', res);
+          // Handle completion here if needed
           this.getPaymentDetails();
-        };
-        error: (error: any) => {
+        },
+        (error) => {
           console.log(error);
-        };
-      });
+          // Handle error here
+        }
+      );
   }
 }
