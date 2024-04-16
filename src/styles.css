@@ -50,8 +50,9 @@ body {
   cursor: pointer;
 }
 .table td:hover {
-  background-color: #bcdef5;
+  background-color: #f1f9ff;
 }
 tbody tr:hover {
-  border: 1px solid red;
+  border: 1px solid rgb(51, 51, 51);
+  cursor: pointer;
 }

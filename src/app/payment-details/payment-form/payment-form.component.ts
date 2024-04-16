@@ -24,8 +24,11 @@ export class PaymentFormComponent implements OnInit {
     console.log('form value on submit', form.value);
 
     const paymentInfo: Payment = form.value;
-
-    this.PaymentService.postPaymentDetails(paymentInfo);
+    if (this.paymentDetailForm.peymanetDetailId == 0) {
+      this.PaymentService.postPaymentDetails(paymentInfo);
+    } else {
+      this.PaymentService.putPaymentDetails(paymentInfo);
+    }
 
     form.reset();
   }

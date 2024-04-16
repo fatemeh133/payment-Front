@@ -34,4 +34,18 @@ export class PaymentService {
       this.paymentListChanged.next([...paymentRes]);
     });
   }
+
+  putPaymentDetails(paymentInfo: Payment) {
+    this.http
+      .put(this.url + '/' + paymentInfo.peymanetDetailId, paymentInfo)
+      .subscribe((res) => {
+        console.log('put response', res);
+        complete: () => {
+          this.getPaymentDetails();
+        };
+        error: (error: any) => {
+          console.log(error);
+        };
+      });
+  }
 }
