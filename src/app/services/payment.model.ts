@@ -1,5 +1,5 @@
 export interface Payment {
-  peymanetDetailId: number;
+  peymanetDetailId?: number;
   cardOwnerName: string;
   cardNumber: string;
   expirationDate: string;

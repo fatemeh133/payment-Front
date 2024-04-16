@@ -21,10 +21,16 @@ export class PaymentFormComponent implements OnInit {
   };
 
   onSubmit(form: NgForm) {
+    const peymentInfo: Payment = form.value;
+
     console.log('form value on submit', form.value);
 
     const paymentInfo: Payment = form.value;
-    if (this.paymentDetailForm.peymanetDetailId == 0) {
+    if (
+      peymentInfo.peymanetDetailId == 0 ||
+      peymentInfo.peymanetDetailId == null
+    ) {
+      delete peymentInfo.peymanetDetailId;
       this.PaymentService.postPaymentDetails(paymentInfo);
     } else {
       this.PaymentService.putPaymentDetails(paymentInfo);
