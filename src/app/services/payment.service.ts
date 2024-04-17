@@ -50,4 +50,13 @@ export class PaymentService {
         }
       );
   }
+
+  deletePaymentDetails(paymentID: number) {
+    this.http.delete(this.url + '/' + paymentID).subscribe({
+      complete: () => {
+        console.log('deleted sucessfully');
+        this.getPaymentDetails();
+      },
+    });
+  }
 }

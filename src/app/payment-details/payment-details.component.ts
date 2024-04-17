@@ -22,4 +22,9 @@ export class PaymentDetailsComponent implements OnInit {
 
     this.paymentService.currentPaymentDetail.next({ ...Paymentitem });
   }
+
+  onDelete(event: any, paymentId: number) {
+    event.stopPropagation();
+    this.paymentService.deletePaymentDetails(paymentId);
+  }
 }

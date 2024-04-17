@@ -23,7 +23,9 @@
           <td>{{ item.cardOwnerName }}</td>
           <td>{{ item.cardNumber }}</td>
           <td>{{ item.expirationDate }}</td>
-          <td><i class="far fa-trash-alt fa-lg"></i></td>
+          <td (click)="onDelete($event, item.peymanetDetailId!)">
+            <i class="far fa-trash-alt fa-lg"></i>
+          </td>
         </tr>
       </tbody>
     </table>
