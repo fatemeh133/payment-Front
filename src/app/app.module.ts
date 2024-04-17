@@ -23,7 +23,7 @@ import { UiService } from './services/ui-service.service';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
-  providers: [PaymentService, UiService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
